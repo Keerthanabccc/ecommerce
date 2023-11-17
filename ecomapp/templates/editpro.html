@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<u>
+    <h1 align="center"> <font size="7" color="red">Seller <font color="black"> Edit</font> Registration page</font> </h1>
+</u>
+    <form method="post" enctype="multipart/form-data">{% csrf_token %}
+        <table height="900px" lenght="100px">
+            <tr>
+                <th><label><font size="5" color="red"> First Name</font></label></th>
+                <td><input type="text" name="fname" value="{{data.fname}}"> </td>
+            </tr>
+
+            <tr>
+                <th><label><font size="5" color="red">Last Name</font></label></th>
+                <td><input type="text" name="lname" value="{{data.lname}}">(Max 50 Charecters Allowed)</td>
+
+            </tr>
+            <tr>
+                <th><label><font size="5" color="red"> User Name</font></label></th>
+                <td><input type="text" name="username" value="{{data.username}}"></td>
+            </tr>
+            <tr>
+                <th><label><font size="5" color="red">E-Mail</font></label></th>
+                <td><input type="email" name="email" value="{{data.email}}"></td>
+            </tr>
+             <tr>
+                <th><label><font size="5" color="red"> Phone Number</font></label></th>
+                <td><input type="number" name="phone" value="{{data.phone}}"></td>
+            </tr>
+            <tr>
+                <th><label><font size="5" color="red"> Gender</font></label></th>
+                <td><input type="radio" name="gender" value="female">Female
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="other">Other</td>
+
+            </tr>
+            <tr>
+                 <th>date:{{data.dob}}</th>
+                <th><label><font size="5" color="red"> Date Of Birth(DOB)</font></label></th>
+                <td><input type="date" name="dob" value="{{data.dob}}"></td>
+            </tr>
+            <tr>
+                <th><label><font size="5" color="red"> Company Address</font></label></th>
+                <td><textarea name="address" rows="6" cols="20">{{data.address}}</textarea></td>
+            </tr>
+           <tr>
+                <th><label><font size="5" color="red"> Company details</font></label></th>
+                <td><textarea name="detaddress" rows="6" cols="20" >{{data.detaddress}}</textarea></td>
+            </tr>
+
+
+            <tr>
+                <img src="{% static img %}">
+                <th><label><font size="5" color="red"> Update your profile picture</font></label></th>
+                <td><input type="file" name="fiimg" value="{{data.fiimg}}"></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </table>
+         <p align="center"><input type="SUBMIT" id="qw" value="update">
+
+
+    </form>
+
+
+
+</body>
+</html>

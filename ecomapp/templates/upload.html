@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+        <style>
+    body{
+        background-color: aqua;
+        }
+     #qw{
+    height :40px;
+    width :200px;
+
+    }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<u>
+    <h1 align="center"> <font size="7" color="red">Seller <font color="black"> File Upload</font> Form</font> </h1>
+</u>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <table height="500px" >
+        <tr>
+            <th><label><font size="5"> Product Name</font></label></th>
+            <td><input type="text" name="pname"> </td>
+        </tr>
+        <tr>
+            <th><label><font size="5"> Product Image</font></label></th>
+            <td><input type="file" name="fileimage"></td>
+        </tr>
+        <tr>
+            <th><label><font size="5"> Product Description</font></label></th>
+            <td><textarea name="pdes"></textarea> </td>
+        </tr>
+        <tr>
+            <th><label><font size="5">Product Price</font> </label></th>
+            <td><input type="text" name="price"></td>
+
+        </tr>
+    </table>
+    <p align="center"><input type="SUBMIT" id="qw">
+
+</form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
